@@ -1,0 +1,360 @@
+
+/* RESETS CSS */
+
+:root{
+    /* Colores principales */
+    --blanco : white;
+    --negro  : black;
+    --gris : rgba(179,179,179);
+    --borde-negro : #00000050;
+    --casi-negro:#292929;
+
+    /* Tipo */
+    --tipoPrincipal  : 'Open Sans', sans-serif;
+    --tipoSecundaria : 'Open Sans', sans-serif;
+    --tipoTerciaria  : 'Open Sans', sans-serif;
+}
+
+*{  
+    margin:0;
+    padding:0;
+    border:0;
+    box-sizing: border-box;
+}
+
+a{
+    display: block;
+    color:inherit;
+    text-decoration: none;
+}
+
+ul{
+    list-style-type: none;
+}
+
+p a{
+    display: inline-flex;
+}
+
+h1 , h2 , h3 , h4 , h5 , h6 , strong{
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+img{
+    width:100%;
+    display: block;
+    object-fit: cover;
+}
+
+body{
+    font-size: 100%;
+    font-family: var(--tipoPrincipal);
+    color:var(--negro);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+} 
+
+
+/* HEADER*/
+.header{
+    width:100%;
+    min-height: 110px;  
+    margin-top:20px; 
+    background-color: var(--blanco);
+    padding: 1.2em 0;   
+}
+
+.centrado{
+    width: 80%;
+    margin: auto;
+
+    display: flex;
+    position: relative;
+    
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.header .fa-bars{
+    display: none;
+    float: right;
+    margin:.3em 0 0 ;
+}
+
+.header .centrado .logo{
+    width: 100%;
+    max-width: 9.3em;
+    float:left;   
+}
+.header .centrado .logo img{
+    width: 140%;
+}
+
+.header .centrado .menu{
+    width: calc( 100% - 150px );
+    margin-left: 80px;
+    
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    align-content: initial;
+}
+
+.header .centrado .menu .item{
+    margin:0 20px 0px 0;
+    float: right;
+    font-weight: 600;
+    letter-spacing:2px; 
+}
+
+.header .centrado .menu .item:hover{
+    color: var(--gris);
+    transition: all .2s ease;
+}
+
+
+.header .centrado .menu{
+    display:flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items:left;
+    align-content: left;   
+}
+
+/* submenus */
+.header .centrado .menu .submenu{
+    background-color:var(--casi-negro);
+    color: var(--blanco); 
+    
+    margin-left: -1em;
+    padding: 1em;
+    margin-top: -0.1em;
+    border: 10px transparent; 
+    
+    display:none;
+    position:absolute;
+
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+    align-content: left;
+ }
+ 
+ .header .centrado .menu .submenu li{
+    display: flex;
+    float: left;
+    line-height:1.7em ;
+    text-align: left;
+ }
+ 
+ .header .centrado .menu .submenu li:hover{
+    color: var(--gris);
+    transition: all .2s ease;
+ }
+
+ /* para acceder a los submenús */
+.header .centrado .menu .item:hover > .submenu{
+    display: flex;
+    position: fixed;
+    flex-flow: column nowrap;
+}
+
+
+
+/* SOUL-MOVIE */
+
+.soul{
+    width:100%;
+    min-height: 140vh;
+    
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+     
+    /* false parallax */
+    background-image: url(../assets/img/bg.jpg); /*solucionaría el tamaño de imagen si lo metiera desde el html*/
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.soul .logo{
+    width:90%;
+    max-width: 47.5em;
+    min-height: 3em;    
+}
+
+
+/* EXTRAS */
+
+.extras{
+    width:100%;
+    padding: 150px 0;   
+}
+
+.extras .centrado{
+    width: 80%;
+    margin: auto;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: initial;
+}
+
+.extras .centrado .columna{
+    width: calc( 100% / 3 - 1.6em );
+    
+}
+
+.extras .centrado .columna .imagen{
+    width:100%;
+    min-height: 12.5em;
+    margin: 0 0 2.5em 0;
+}
+
+.extras .centrado .columna .titular{
+    width: 100%;
+    font-weight: 700;
+}
+
+
+/* FOOTER */
+
+.footer{
+    width:100%;
+    min-height: 12.5em;
+    font-size: .8em;
+}
+
+.footer .rrss{
+    width:  100%;
+    min-height: 50px;
+    
+    margin: auto;
+    padding: 40px;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: initial;
+}
+
+.footer .rrss:hover{
+    color: var(--gris);
+    transition: all .5s ease; 
+}
+
+.footer .rrss .red-social{
+    height: 2em;
+    margin: 0 .6em; 
+    font-size: .9em;
+}
+
+.footer .rrss .red-social:hover{
+    color:var(--negro);
+    transition: all .5s ease; 
+}
+
+.footer .rrss .red-social .fab{
+    font-size: 2.3em;
+}
+
+.footer p.links{
+    width: 50%;
+    min-height: 12em;
+    color: var(--casi-negro);  
+
+    margin:  auto;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: initial;
+    align-content: center; 
+    
+    font-size: 122%;
+    
+    
+}
+
+.footer p.links a.enlaces{
+    min-height: 1.2em;
+   
+    margin: 0 .2em;
+    padding: 0 0 .2em;
+    border-bottom:1px solid var(--casi-negro);
+    
+    font-weight: 400;
+    
+}
+
+.footer p.links a.enlaces:hover{ 
+    color:var(--gris);
+    transition: all .5s ease;  
+}
+
+.footer .copyright{
+    width:50%;
+    margin: auto;
+    padding: 0em 0em 4em 0em;
+    
+    font-size: 1.2em;  
+}
+
+
+
+@media screen and (max-width:1024px){
+    body{
+        font-size: 80%;
+    }
+}
+
+@media screen and (max-width:1200px){
+   
+    .header .centrado .menu{
+        display: none;  
+    }
+
+    .header .fa-bars{
+        display: flex; 
+        font-size: 1.7em; 
+        position: relative;
+        padding-top: 10px;
+        
+        
+    }
+    
+    .extras{
+        padding: 10vh 0 4vh;
+    }
+
+    .extras .centrado .columna{
+        width: 100%; 
+        margin: 0 0 3em;
+    }
+    
+    .footer p.links a.enlaces{
+        margin: .4em 0;
+        border: 0;
+        font-size: 14px;
+        text-decoration: underline ;
+    }
+}
+
+
+@media screen and (prefers-color-scheme:dark){
+    :root{
+        /* Colores principales */
+        --blanco : black;
+        --negro  : white;
+        --borde-negro : #FFFFFF50;
+   }
+}

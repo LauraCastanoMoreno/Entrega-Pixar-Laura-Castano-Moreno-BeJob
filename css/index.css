@@ -233,7 +233,7 @@ body{
     font-size: .8em;
 }
 
-.footer .rrss{
+.rrss{
     width:  100%;
     min-height: 50px;
     
@@ -247,27 +247,27 @@ body{
     align-content: initial;
 }
 
-.footer .rrss:hover{
+.rrss:hover{
     color: var(--gris);
     transition: all .5s ease; 
 }
 
-.footer .rrss .red-social{
+.red-social{
     height: 2em;
     margin: 0 .6em; 
     font-size: .9em;
 }
 
-.footer .rrss .red-social:hover{
+.red-social:hover{
     color:var(--negro);
     transition: all .5s ease; 
 }
 
-.footer .rrss .red-social .fab{
+.red-social .fab{
     font-size: 2.3em;
 }
 
-.footer p.links{
+p.links{
     width: 50%;
     min-height: 12em;
     color: var(--casi-negro);  
@@ -280,12 +280,14 @@ body{
     align-items: initial;
     align-content: center; 
     
-    font-size: 122%;
-    
-    
+    font-size: 122%;   
 }
 
-.footer p.links a.enlaces{
+.links a::after{
+    content: "|" ;
+}
+
+a.enlaces{
     min-height: 1.2em;
    
     margin: 0 .2em;
@@ -296,12 +298,12 @@ body{
     
 }
 
-.footer p.links a.enlaces:hover{ 
+a.enlaces:hover{ 
     color:var(--gris);
     transition: all .5s ease;  
 }
 
-.footer .copyright{
+.copyright{
     width:50%;
     margin: auto;
     padding: 0em 0em 4em 0em;
